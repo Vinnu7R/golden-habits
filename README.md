@@ -1,39 +1,39 @@
 # Golden Habits 2.0 🌟
 
-Golden Habits 2.0 is a modern, viral-ready habit tracking web application designed to turn consistency into shareable content. It focuses on simplicity, visual rewards, and social sharing to keep you motivated on your journey.
+Golden Habits 2.0 is a modern, viral-ready habit tracking web application designed to turn consistency into shareable content. It focuses on simplicity, visual rewards, and ethical engagement loops to keep you motivated.
 
-## 🧠 Product Vision
-Most habit trackers are basic and boring. Golden Habits 2.0 is built for the modern age, where progress should be visual and worth sharing. It turns your daily discipline into beautiful, aesthetic content.
-
-## 🚀 Key Features
-- **Habit Management:** Create habits with custom names and emojis.
-- **Daily Tracking:** A simple, satisfying toggle to mark habits as complete.
-- **Streak System:** Track your consistency with visual fire streaks (🔥).
-- **Shareable Progress Cards:** Generate high-resolution (1080x1080) aesthetic cards showing your streak and weekly progress, perfect for Instagram or WhatsApp.
-- **Local Storage:** All your data stays on your device—no account or backend required.
-- **Mobile-First Design:** Optimized for a smooth experience on any device.
+## 🚀 Enhanced Features
+- **Daily Check-in Flow:** Immediate feedback on your daily progress with a visual summary banner.
+- **Streak Protection:** Built-in 1-day grace period. One missed day won't reset your hard-earned streak immediately.
+- **Milestone Rewards:** Unlock badges as you progress:
+  - 3 Days: **Good Start**
+  - 7 Days: **On Fire**
+  - 30 Days: **Unstoppable**
+- **Weekly Progress Grid:** A clear 7-day visualization for every habit to help you see your consistency at a glance.
+- **Micro-Rewards:** randomized motivational messages and satisfying animations whenever you complete a habit.
+- **Enhanced Achievement Cards:** Generate beautiful, social-media-ready cards including your streak, weekly grid, and randomized motivational quotes.
+- **Low-Friction Creation:** Quick-add suggestions and a clean, collapsible habit creation form.
+- **Privacy First:** All data is stored locally in your browser using `localStorage`.
 
 ## 🛠️ Tech Stack
-- **HTML5:** Semantic structure.
-- **CSS3:** Custom properties, Grid/Flexbox, and smooth animations.
-- **Vanilla JavaScript:** Core logic, state management, and DOM manipulation.
-- **Canvas API:** Used to dynamically generate shareable image assets.
+- **HTML5 & CSS3:** Mobile-first, responsive design with smooth transitions and custom properties.
+- **Vanilla JavaScript:** High-performance logic and state management without external dependencies.
+- **Canvas API:** Dynamic high-resolution image generation for sharing achievements.
 
 ## 📦 How to Run
 1. Clone the repository.
 2. Open `index.html` in any modern web browser.
-3. Alternatively, serve the files using a simple local server:
+3. Or, run a local server:
    ```bash
    python3 -m http.server 8000
    ```
-   Then navigate to `http://localhost:8000`.
+   Navigate to `http://localhost:8000`.
 
-## 📜 Usage Instructions
-1. **Add a Habit:** Enter a name (e.g., "Meditation") and an emoji (e.g., "🧘") in the top form.
-2. **Track Daily:** Click the circular button on any habit card to mark it as done for today.
-3. **View Streaks:** See your consecutive days count update in real-time.
-4. **Share:** Click "Share Progress" on any habit to open the share modal. Preview your card and click "Download Image" to save it for social media.
+## 📜 Usage
+1. **Quick Start:** Use the suggestion buttons to quickly add common habits like "Drink Water".
+2. **Track:** Tap the large toggle button on your habit cards. Enjoy the instant feedback and progress bar updates.
+3. **Visualize:** Check the weekly grid below each habit to track your 7-day consistency.
+4. **Share:** Open the share modal to generate a professional-looking achievement card and download it to your device.
 
 ---
-Built with ❤️ for the consistency-minded.
 **Golden Habits — Consistency is Content.**
