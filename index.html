@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Habits 2.0</title>
+    <title>Golden Habits 2.0 | Full-Stack</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,29 +11,78 @@
 </head>
 <body>
     <div class="app-container">
+        <!-- Auth Overlay -->
+        <div id="auth-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="close-auth-btn">&times;</span>
+                <div id="auth-forms">
+                    <div id="login-form-container">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to sync your habits to the cloud.</p>
+                        <form id="login-form">
+                            <input type="email" id="login-email" placeholder="Email" required>
+                            <input type="password" id="login-password" placeholder="Password" required>
+                            <button type="submit" class="auth-btn">Login</button>
+                        </form>
+                        <p class="toggle-auth">New here? <a href="#" id="show-signup">Create account</a></p>
+                    </div>
+                    <div id="signup-form-container" class="hidden">
+                        <h2>Join Golden Habits</h2>
+                        <p>Track progress and join the leaderboard.</p>
+                        <form id="signup-form">
+                            <input type="text" id="signup-username" placeholder="Username" required maxlength="15">
+                            <input type="email" id="signup-email" placeholder="Email" required>
+                            <input type="password" id="signup-password" placeholder="Password" required minlength="6">
+                            <button type="submit" class="auth-btn">Sign Up</button>
+                        </form>
+                        <p class="toggle-auth">Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="user-nav">
+            <div id="user-status">
+                <span id="status-text">Guest Mode</span>
+                <button id="auth-trigger-btn">Login</button>
+            </div>
+            <div id="user-profile" class="hidden">
+                <span id="profile-name"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </nav>
+
         <header>
             <h1>Golden <span class="highlight">Habits</span></h1>
-            <p class="tagline">Turn consistency into content.</p>
+            <p class="tagline">Cloud-synced consistency.</p>
 
             <div id="daily-summary" class="summary-card">
                 <div class="summary-text">You completed <span id="completed-count">0</span>/<span id="total-count">0</span> today</div>
                 <div class="summary-progress-bar"><div id="progress-fill"></div></div>
             </div>
-
-            <div id="reminder-banner" class="banner hidden">
-                🔔 Don't forget your habits today!
-            </div>
         </header>
 
         <main>
+            <!-- Leaderboard Section -->
+            <section id="leaderboard-section">
+                <div class="section-header">
+                    <h2>Global Leaderboard</h2>
+                    <span class="fire-icon">🔥</span>
+                </div>
+                <div id="leaderboard-list">
+                    <p class="loading">Loading top performers...</p>
+                </div>
+            </section>
+
+            <!-- Habit Section -->
             <section id="habit-form-section">
                 <div class="form-header">
-                    <h2>Add Habit</h2>
+                    <h2>My Habits</h2>
                     <button id="toggle-form-btn" class="icon-btn">+</button>
                 </div>
                 <form id="habit-form" class="collapsed">
                     <div class="input-group">
-                        <input type="text" id="habit-name" placeholder="Name (e.g. Drink Water)" required maxlength="25">
+                        <input type="text" id="habit-name" placeholder="Name (e.g. Meditate)" required maxlength="25">
                         <input type="text" id="habit-emoji" placeholder="🔥" required maxlength="2">
                     </div>
                     <div class="suggestions">
@@ -41,7 +90,7 @@
                         <button type="button" class="suggest-btn" data-name="Exercise" data-emoji="🏃">🏃 Exercise</button>
                         <button type="button" class="suggest-btn" data-name="Read" data-emoji="📚">📚 Read</button>
                     </div>
-                    <button type="submit" id="add-habit-btn">Create Habit</button>
+                    <button type="submit" id="add-habit-btn">Add Habit</button>
                 </form>
             </section>
 
@@ -62,17 +111,15 @@
             </div>
         </footer>
 
-        <!-- Micro Reward Toast -->
+        <!-- Toasts -->
         <div id="toast" class="toast hidden"></div>
 
         <!-- Share Modal -->
         <div id="share-modal" class="modal hidden">
             <div class="modal-content">
-                <span class="close-btn">&times;</span>
+                <span class="close-btn" id="close-share-btn">&times;</span>
                 <h2>Share Achievement</h2>
-                <div id="card-preview-container">
-                    <!-- Preview will be shown here -->
-                </div>
+                <div id="card-preview-container"></div>
                 <button id="download-btn">Download Image</button>
             </div>
         </div>
@@ -80,6 +127,6 @@
         <canvas id="share-canvas" style="display:none;"></canvas>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

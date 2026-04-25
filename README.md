@@ -1,39 +1,28 @@
-# Golden Habits 2.0 🌟
+# Golden Habits 2.0 🌟 | Cloud Edition
 
-Golden Habits 2.0 is a modern, viral-ready habit tracking web application designed to turn consistency into shareable content. It focuses on simplicity, visual rewards, and ethical engagement loops to keep you motivated.
+Golden Habits 2.0 is now a full-stack habit tracking application. It combines aesthetic visual progress with cloud synchronization and social competition.
 
-## 🚀 Enhanced Features
-- **Daily Check-in Flow:** Immediate feedback on your daily progress with a visual summary banner.
-- **Streak Protection:** Built-in 1-day grace period. One missed day won't reset your hard-earned streak immediately.
-- **Milestone Rewards:** Unlock badges as you progress:
-  - 3 Days: **Good Start**
-  - 7 Days: **On Fire**
-  - 30 Days: **Unstoppable**
-- **Weekly Progress Grid:** A clear 7-day visualization for every habit to help you see your consistency at a glance.
-- **Micro-Rewards:** randomized motivational messages and satisfying animations whenever you complete a habit.
-- **Enhanced Achievement Cards:** Generate beautiful, social-media-ready cards including your streak, weekly grid, and randomized motivational quotes.
-- **Low-Friction Creation:** Quick-add suggestions and a clean, collapsible habit creation form.
-- **Privacy First:** All data is stored locally in your browser using `localStorage`.
+## ☁️ Full-Stack Features
+- **User Authentication:** Securely sign up and log in via email/password (Firebase Auth).
+- **Cloud Synchronization:** Your habits, streaks, and scores are automatically saved to the cloud (Firestore).
+- **Guest Mode:** Start immediately with local storage. Your data will automatically sync to your new account when you sign up.
+- **Global Leaderboard:** Compete with users worldwide! See who has the longest streaks in real-time.
+- **Cross-Device Access:** Log in from any device to see your habits and progress.
+
+## 🚀 Core Features (Improved)
+- **Streak Protection:** 1-day grace period included.
+- **Shareable Cards:** High-res achievement cards for social media.
+- **Weekly Grid:** Visual 7-day consistency tracking.
+- **Milestone Badges:** Unlock rewards at 3, 7, and 30-day streaks.
 
 ## 🛠️ Tech Stack
-- **HTML5 & CSS3:** Mobile-first, responsive design with smooth transitions and custom properties.
-- **Vanilla JavaScript:** High-performance logic and state management without external dependencies.
-- **Canvas API:** Dynamic high-resolution image generation for sharing achievements.
+- **Frontend:** Vanilla HTML, CSS, JavaScript (ES6 Modules).
+- **Backend-as-a-Service:** Firebase (Authentication + Cloud Firestore).
+- **Image Generation:** HTML5 Canvas API.
 
-## 📦 How to Run
-1. Clone the repository.
-2. Open `index.html` in any modern web browser.
-3. Or, run a local server:
-   ```bash
-   python3 -m http.server 8000
-   ```
-   Navigate to `http://localhost:8000`.
-
-## 📜 Usage
-1. **Quick Start:** Use the suggestion buttons to quickly add common habits like "Drink Water".
-2. **Track:** Tap the large toggle button on your habit cards. Enjoy the instant feedback and progress bar updates.
-3. **Visualize:** Check the weekly grid below each habit to track your 7-day consistency.
-4. **Share:** Open the share modal to generate a professional-looking achievement card and download it to your device.
+## 📦 Getting Started
+1. **Frontend:** Simply open `index.html` or serve via `python3 -m http.server 8000`.
+2. **Backend Setup:** See [FIREBASE_SETUP.md](./FIREBASE_SETUP.md) for instructions on how to connect your own Firebase project.
 
 ---
-**Golden Habits — Consistency is Content.**
+**Golden Habits — Consistency is Global.**
